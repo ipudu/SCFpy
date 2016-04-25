@@ -35,7 +35,7 @@ News
 
 setup(
     name='SCFpy',
-    version=SCF.__version__,
+    version=SCFpy.__version__,
     description='Simple restrited Hatree-Fock code',
     long_description=long_description,
     classifiers=[
@@ -61,7 +61,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'howdoi = SCFpy.main:command_line_runner',
+            'scfpy = SCFpy.main:command_line_runner',
         ]
     },
     install_requires=[
