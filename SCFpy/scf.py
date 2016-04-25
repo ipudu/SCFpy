@@ -66,6 +66,7 @@ class rhf(object):
         ###################################################
         #print C
         Pold, P = self.density(C,P,self.Nelec)
+        P = 0.5 * P + 0.5 * Pold
         #print "Pold = \n", Pold
         #print "P = \n", P
         ###################################################

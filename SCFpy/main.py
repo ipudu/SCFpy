@@ -7,6 +7,7 @@ import subprocess
 from scf import rhf
 from iterator import SCFIterator
 from parser import parser as read
+from __init__ import __version__
 
 def enable_cache():
     if not os.path.exists('perm'):
@@ -37,7 +38,7 @@ def nwchem(args):
     return name
 
 def get_parser():
-    parser = argparse.ArgumentParser(description='SCFpy: restrited Hatree-Fock code')
+    parser = argparse.ArgumentParser(description='SCFpy: simple restrited Hatree-Fock code')
     parser.add_argument('input', type=str, nargs='?',help='xyz file of molecule')
     parser.add_argument('-c', '--charge',  default=0, type=int,
                         help='specify total charge of the molecule (default: 0)')
@@ -50,13 +51,16 @@ def get_parser():
 def command_line_runner():
     parser = get_parser()
     args = vars(parser.parse_args())
+    if args['version']:
+        print(__version__)
+        return
     if not args['input']:
         parser.print_help()
         return
     else:
         enable_cache()
         name = nwchem(args)
-        #os.system('nwchem '+ name +'.nw' + '>' + name +'.nwo')
+        os.system('nwchem '+ name +'.nw' + '>' + name +'.nwo')
         p = read(name+'.nwo')
         mol = rhf(p.Nelec,'enuc.dat','s.dat','t.dat','v.dat','e2.dat')
         ens = mol.converge(SCFIterator)
