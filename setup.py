@@ -36,7 +36,7 @@ News
 setup(
     name='SCFpy',
     version=SCFpy.__version__,
-    description='Simple restricted Hartree-Fock code',
+    description='A Simple restricted Hartree-Fock code',
     long_description=long_description,
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -51,7 +51,7 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Topic :: Computational chemistry",
     ],
-    keywords='Simple restricted Hartree-Fock code',
+    keywords='A Simple restricted Hartree-Fock code',
     author='Pu Du',
     author_email='rocketsboy@gmail.com',
     maintainer='Pu Du',

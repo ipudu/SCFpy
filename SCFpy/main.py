@@ -1,6 +1,10 @@
-"""
-main program of SCFpy
-"""
+######################################################
+#
+# SCFpy: A Simple restricted Hartree-Fock code
+# written by Pu Du (rocketsboy@gmail.com)
+#
+######################################################
+
 import argparse
 import os
 import subprocess

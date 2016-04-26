@@ -1,3 +1,10 @@
+######################################################
+#
+# SCFpy: A Simple restricted Hartree-Fock code
+# written by Pu Du (rocketsboy@gmail.com)
+#
+######################################################
+
 import os
 import re
 import subprocess

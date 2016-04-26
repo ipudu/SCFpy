@@ -1,3 +1,9 @@
+######################################################
+#
+# SCFpy: A Simple restricted Hartree-Fock code
+# written by Pu Du (rocketsboy@gmail.com)
+#
+######################################################
 import numpy as np
 
 class SCFIterator(object):

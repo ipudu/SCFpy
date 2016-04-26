@@ -1,7 +1,17 @@
+######################################################
+#
+# SCFpy: A Simple restricted Hartree-Fock code
+# written by Pu Du (rocketsboy@gmail.com)
+#
+######################################################
+
 import numpy as np
 from iterator import SCFIterator
 
 class rhf(object):
+    """
+    class of restricted Hartree-Fock method.
+    """
     def __init__(self,Nelec,enuc,s,t,v,e2):
         self.Nelec = Nelec
         self.enuc = self.nuclear_repulsion(enuc)

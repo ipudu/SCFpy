@@ -56,6 +56,11 @@ Notes
 
 - You have to have NWChem package installed on your machine.
 - SCFpy get the total number of electrons, kinetic, potential, overlap, two electrons integrals from NWChem output.
+- Tested small molecules like H2, CH4, H2O.....
+- It may very slow for large molecules and large basis sets since SCFpy is single-core based program.
 
-Troubleshooting
----------------
+Acknowledgement
+----------------
+
+This little program got inspired by Pyquante 2 and Joshua Goings's HeH+ SCF code.
+I also got a lot of help from Dr. Kenneth Lopata.
