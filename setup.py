@@ -57,7 +57,7 @@ setup(
     maintainer='Pu Du',
     maintainer_email='rocketsboy@gmail.com',
     url='https://github.com/pudu1991/SCFpy',
-    license='GNU',
+    license='MIT',
     packages=find_packages(),
     entry_points={
         'console_scripts': [
