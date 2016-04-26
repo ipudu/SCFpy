@@ -49,7 +49,7 @@ setup(
         "Programming Language :: Python :: 3.2",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
-        "Topic :: Computational chemistry",
+        "Topic :: Scientific/Engineering :: Chemistry",
     ],
     keywords='A Simple restricted Hartree-Fock code',
     author='Pu Du',
