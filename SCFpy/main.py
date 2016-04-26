@@ -9,6 +9,12 @@ from iterator import SCFIterator
 from parser import parser as read
 from __init__ import __version__
 
+def welcome():
+    print '#' * 42
+    print '#SCFpy: Simple restrited Hatree-Fock code#'
+    print '#' * 42
+    print '\n' * 5
+
 def enable_cache():
     if not os.path.exists('perm'):
         os.makedirs('perm')
@@ -58,14 +64,23 @@ def command_line_runner():
         parser.print_help()
         return
     else:
+        welcome()
         enable_cache()
+        print 'Preparing the input file for NWChem ............'
         name = nwchem(args)
+        print 'NWChem is running................................'
         os.system('nwchem '+ name +'.nw' + '>' + name +'.nwo')
+        print 'Getting following infomation from NWChem output:'
+        print 'Number of total electrons'
+        print 'Nuclear replusion energy'
+        print 'Kinetic integral'
+        print 'Potential integral'
+        print 'Overlap integral'
+        print 'two electrons integral'
+        print '\n' * 5
         p = read(name+'.nwo')
         mol = rhf(p.Nelec,'enuc.dat','s.dat','t.dat','v.dat','e2.dat')
         ens = mol.converge(SCFIterator)
-        print '#' * 80
-        print "Nul. energy = " + str(mol.enuc)
         print "Total SCF energy = " +str(mol.energy)
 
 if __name__ == '__main__':
