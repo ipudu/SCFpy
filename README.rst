@@ -53,9 +53,9 @@ Author
 
 Notes
 -----
+
 - You have to have NWChem package installed on your machine.
-- SCFpy get the total number of electrons, kinetic, potential, overlap, two electrons
-integrals from NWChem output.
+- SCFpy get the total number of electrons, kinetic, potential, overlap, two electrons integrals from NWChem output.
 
 Troubleshooting
 ---------------
