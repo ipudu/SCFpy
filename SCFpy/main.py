@@ -13,7 +13,7 @@ def welcome():
     print '#' * 42
     print '#SCFpy: Simple restricted Hartree-Fock code#'
     print '#' * 42
-    print '\n' * 5
+    print '\n'
 
 def enable_cache():
     if not os.path.exists('perm'):
@@ -68,7 +68,7 @@ def command_line_runner():
         enable_cache()
         print 'Preparing the input file for NWChem ............'
         name = nwchem(args)
-        print 'NWChem is running................................'
+        print 'NWChem is running...............................'
         os.system('nwchem '+ name +'.nw' + '>' + name +'.nwo')
         print 'Getting following infomation from NWChem output:'
         print 'Number of total electrons'
@@ -77,11 +77,12 @@ def command_line_runner():
         print 'Potential integral'
         print 'Overlap integral'
         print 'two electrons integral'
-        print '\n' * 5
+        print '\n'
         p = read(name+'.nwo')
         mol = rhf(p.Nelec,'enuc.dat','s.dat','t.dat','v.dat','e2.dat')
+        print '=====> Begin SCF Iterations <====\n\n'
         ens = mol.converge(SCFIterator)
-        print "Total SCF energy = " +str(mol.energy)
+        print "*    Total SCF energy = " +str(mol.energy)
 
 if __name__ == '__main__':
     command_line_runner()

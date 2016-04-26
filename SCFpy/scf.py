@@ -16,8 +16,9 @@ class rhf(object):
         S_mhalf = np.dot(U, np.dot(s_mhalf, U.T))
         self.X = S_mhalf
         ###################################################
-        #self.P = np.zeros((len(self.T),len(self.T)))
-        self.P = np.random.rand(len(self.T), len(self.T))
+        #set up a guess density matrix
+        ###################################################
+        self.P = np.zeros((len(self.T),len(self.T)))
         self.twoe = self.twoe_integrals(e2)
         self.energies = []
         self.energy = 0
@@ -84,7 +85,7 @@ class rhf(object):
         Traw = np.loadtxt(t)
         #dim = int(np.sqrt(len(Traw)))
         dim = int(Traw[-1][0])
-        T = np.empty((dim, dim))
+        T = np.zeros((dim, dim))
         for e in Traw:
             T[int(e[0])-1][int(e[1])-1] = e[2]
         return T
