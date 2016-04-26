@@ -11,7 +11,7 @@ from __init__ import __version__
 
 def welcome():
     print '#' * 42
-    print '#SCFpy: Simple restrited Hatree-Fock code#'
+    print '#SCFpy: Simple restricted Hartree-Fock code#'
     print '#' * 42
     print '\n' * 5
 
@@ -44,7 +44,7 @@ def nwchem(args):
     return name
 
 def get_parser():
-    parser = argparse.ArgumentParser(description='SCFpy: simple restrited Hatree-Fock code')
+    parser = argparse.ArgumentParser(description='SCFpy: simple restricted Hartree-Fock code')
     parser.add_argument('input', type=str, nargs='?',help='xyz file of molecule')
     parser.add_argument('-c', '--charge',  default=0, type=int,
                         help='specify total charge of the molecule (default: 0)')

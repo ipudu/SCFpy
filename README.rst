@@ -1,5 +1,11 @@
 SCFpy
 ====================================================
+SCFpy is a simple restricted Hartree-Fock code for small molecules
+and small basis sets.
+The purpose of this program is for computational chemistry beginner students
+to understand the concept of RHF and SCF procedure and how they works in the
+code.
+
 You can use SCFpy to calculate small molecule energy:
 
 ::
@@ -27,7 +33,7 @@ Usage
 
     usage: scfpy [-h] [-c CHARGE] [-b BASIS] [-v] [input]
 
-    SCFpy: simple restrited Hatree-Fock code
+    SCFpy: simple restricted Hartree-Fock code
 
     positional arguments:
     input                 xyz file of molecule
@@ -48,7 +54,7 @@ Author
 Notes
 -----
 - You have to have NWChem package installed on your machine.
-- SCFpy get the total number of electrons, kinetic, potential, overlap, two electons
+- SCFpy get the total number of electrons, kinetic, potential, overlap, two electrons
 integrals from NWChem output.
 
 Troubleshooting
