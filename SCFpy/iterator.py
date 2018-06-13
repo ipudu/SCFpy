@@ -32,9 +32,9 @@ class SCFIterator(object):
         self.printInfo(E, deltaE, deltaP)
         if abs(deltaP) < self.tol:
             self.converged = True
-            
+            print('\n')
             print('SCF iterations converged = ', self.converged)
-            
+            print('\n')
             raise StopIteration
         self.Eold = E
         return E
