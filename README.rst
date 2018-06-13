@@ -1,5 +1,18 @@
 SCFpy
 ====================================================
+
+.. image:: https://img.shields.io/travis/ipudu/order.svg
+    :target: https://travis-ci.org/ipudu/order
+
+.. image:: https://img.shields.io/pypi/v/scfpy.svg
+    :target: https://pypi.org/project/SCFpy/
+
+.. image:: https://img.shields.io/pypi/l/scfpy.svg
+    :target: https://pypi.org/project/SCFpy/
+
+.. image:: https://img.shields.io/pypi/pyversions/scfpy.svg
+    :target: https://pypi.org/project/SCFpy/
+
 SCFpy is a simple restricted Hartree-Fock code for small molecules
 and small basis sets.
 The purpose of this program is for computational chemistry beginner students
