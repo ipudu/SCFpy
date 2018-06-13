@@ -1,9 +1,6 @@
 SCFpy
 ====================================================
 
-.. image:: https://img.shields.io/travis/ipudu/order.svg
-    :target: https://travis-ci.org/ipudu/order
-
 .. image:: https://img.shields.io/pypi/v/scfpy.svg
     :target: https://pypi.org/project/SCFpy/
 
