@@ -23,7 +23,7 @@ or
 
 ::
 
-    git clone https://github.com/pudu1991/SCFpy.git
+    git clone https://github.com/ipudu/SCFpy.git
     python setup.py install
 
 Usage
