@@ -16,9 +16,9 @@ from .parser import parser as read
 from .__init__ import __version__
 
 def welcome():
-    print('#' * 42)
+    print('#' * 44)
     print('#SCFpy: Simple restricted Hartree-Fock code#')
-    print('#' * 42)
+    print('#' * 44)
     print('\n')
 
 def enable_cache():
