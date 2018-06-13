@@ -1,12 +1,14 @@
 ######################################################
 #
 # SCFpy: A Simple restricted Hartree-Fock code
-# written by Pu Du (rocketsboy@gmail.com)
+# written by Pu Du (pudugg@gmail.com)
 #
 ######################################################
 
+from __future__ import print_function, division
+
 import numpy as np
-from iterator import SCFIterator
+from .iterator import SCFIterator
 
 class rhf(object):
     """

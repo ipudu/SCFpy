@@ -1,23 +1,25 @@
 ######################################################
 #
 # SCFpy: A Simple restricted Hartree-Fock code
-# written by Pu Du (rocketsboy@gmail.com)
+# written by Pu Du (pudugg@gmail.com)
 #
 ######################################################
+
+from __future__ import print_function, division
 
 import argparse
 import os
 import subprocess
-from scf import rhf
-from iterator import SCFIterator
-from parser import parser as read
-from __init__ import __version__
+from .scf import rhf
+from .iterator import SCFIterator
+from .parser import parser as read
+from .__init__ import __version__
 
 def welcome():
-    print '#' * 42
-    print '#SCFpy: Simple restricted Hartree-Fock code#'
-    print '#' * 42
-    print '\n'
+    print('#' * 42)
+    print('#SCFpy: Simple restricted Hartree-Fock code#')
+    print('#' * 42)
+    print('\n')
 
 def enable_cache():
     if not os.path.exists('perm'):
@@ -70,23 +72,23 @@ def command_line_runner():
     else:
         welcome()
         enable_cache()
-        print 'Preparing the input file for NWChem ............'
+        print('Preparing the input file for NWChem ............')
         name = nwchem(args)
-        print 'NWChem is running...............................'
+        print('NWChem is running...............................')
         os.system('nwchem '+ name +'.nw' + '>' + name +'.nwo')
-        print 'Getting following infomation from NWChem output:'
-        print 'Number of total electrons'
-        print 'Nuclear replusion energy'
-        print 'Kinetic integral'
-        print 'Potential integral'
-        print 'Overlap integral'
-        print 'two electrons integral'
-        print '\n'
+        print('Getting following infomation from NWChem output:')
+        print('Number of total electrons')
+        print('Nuclear replusion energy')
+        print('Kinetic integral')
+        print('Potential integral')
+        print('Overlap integral')
+        print('two electrons integral\n')
+
         p = read(name+'.nwo')
         mol = rhf(p.Nelec,'enuc.dat','s.dat','t.dat','v.dat','e2.dat')
-        print '=====> Begin SCF Iterations <====\n\n'
+        print('=====> Begin SCF Iterations <====\n\n')
         ens = mol.converge(SCFIterator)
-        print "*    Total SCF energy = " +str(mol.energy)
+        print("*    Total SCF energy = " +str(mol.energy))
 
 if __name__ == '__main__':
     command_line_runner()
