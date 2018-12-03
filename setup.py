@@ -53,10 +53,10 @@ setup(
     ],
     keywords='A Simple restricted Hartree-Fock code',
     author='Pu Du',
-    author_email='rocketsboy@gmail.com',
+    author_email='pudugg@gmail.com',
     maintainer='Pu Du',
-    maintainer_email='rocketsboy@gmail.com',
-    url='https://github.com/pudu1991/SCFpy',
+    maintainer_email='pudugg@gmail.com',
+    url='https://github.com/ipudu/SCFpy',
     license='MIT',
     packages=find_packages(),
     entry_points={
